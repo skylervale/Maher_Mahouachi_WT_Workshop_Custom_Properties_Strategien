@@ -1,0 +1,38 @@
+.jumbotron {
+    text-align: center;
+}
+
+.logo {
+    max-width: 70%;
+}
+
+body {
+    background: repeating-linear-gradient(
+        45deg, 
+        #29a9df, 
+        #29a9df 0px, 
+        #0170ba 10px, 
+        #0170ba 5px
+    );
+}
+
+.card-text:nth-of-type(2)::before {
+    display: inline-block;
+    content: "Supported in:";
+    margin-right: 0.5em;
+}
+
+.btn.btn-success {
+    color: #ffffff;
+    background-color: hotpink;
+    border-color: hotpink;
+}
+
+.btn.btn-success:hover,
+.btn.btn-success:focus,
+.btn.btn-success:active,
+.btn.btn-success.active {
+    color: #ffffff;
+    background-color: deeppink;
+    border-color: deeppink;
+}

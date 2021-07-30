@@ -7,7 +7,7 @@
  *     title: string // display name
  *     filename: string // the name of your HTML file
  *     description?: string // description that will be listed with your entry
- *     author?: string // your name/tag that will be listed
+ *     duration?: string // your name/tag that will be listed
  *     github?: string // username on github that will display a link to your profile
  *     compatibleBrowsers?: array // browsers that this page is compatible with
  *     sponsored?: boolean // don't worry about adding this, this is done by the owner of the project, your submission will be rejected if set to true without permission.
@@ -42,10 +42,25 @@ const entries = [
 						"</li>"+
 					 "</ul>",
 	},
+    {
+        title: "Aufgabe 1",
+        duration:"25 min",
+        description: "To do",
+        github:"skylervale/Maher_Mahouachi_WT_Workshop_Custom_Properties_Strategien/tree/main/aufgaben/aufgabe_1.html",
+    },
+    {
+        title: "Aufgabe 2",
+        duration:"25 min",
+        description: "To do",
+        github:"skylervale/Maher_Mahouachi_WT_Workshop_Custom_Properties_Strategien/tree/main/aufgaben/aufgabe_2.html",
+    },
+    {
+        title: "Aufgabe 3",
+        duration:"25 min",
+        description: "To do",
+        github:"skylervale/Maher_Mahouachi_WT_Workshop_Custom_Properties_Strategien/tree/main/aufgaben/aufgabe_3.html",
+    },
 ];
-
-// sort based on title
-//const sortedEntries = entries.sort((a, b) => (a.title > b.title ? 1 : b.title > a.title ? -1 : 0));
 
 // create initial list
 searchOnInput();
@@ -76,7 +91,7 @@ function searchOnInput() {
     });
 
     // create list
-    filteredEntries.forEach(({ title, description, filename, github, compatibleBrowsers }) => {
+    filteredEntries.forEach(({ title, description, duration, filename, github, compatibleBrowsers }) => {
         // horizontal rule
         const hr = document.createElement("hr");
         list.appendChild(hr);
@@ -94,6 +109,15 @@ function searchOnInput() {
         cardTitle.className = "card-title";
         cardTitle.appendChild(cardTitleNode);
         body.appendChild(cardTitle);
+
+        // duration
+        if (duration) {
+            const durationSubtitle = document.createElement("h6");
+            const durationSubtitleNode = document.createTextNode("Dauer: " + duration);
+            durationSubtitle.className = "card-subtitle mb-2 text-muted";
+            durationSubtitle.appendChild(durationSubtitleNode);
+            body.appendChild(durationSubtitle);
+        }
 
         // description
         if (description) {
@@ -138,12 +162,16 @@ function searchOnInput() {
         // github button
         if (github) {
             const githubButton = document.createElement("a");
-            const githubButtonNode = document.createTextNode("Github");
+            const githubButtonNode = document.createTextNode("Aufgabe (Github)");
             githubButton.className = "btn btn-primary btn-md";
+            githubButton.target = "_blank";
             githubButton.href = `https://github.com/${github}`;
             githubButton.appendChild(githubButtonNode);
             group2.appendChild(githubButton);
         }
+
+
+
         list.appendChild(card);
     });
 }

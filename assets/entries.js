@@ -44,8 +44,10 @@ const entries = [
 	},
     {
         title: "Aufgabe 1",
-        duration:"25 min",
-        description: "To do",
+        duration:"20 min",
+        description: "<p>In der ersten Übung werden wir lernen, wie man traditionelles CSS in CSS Custom Properties mit scoped variable konvertiert.</p>"+
+                     "<p>Der CSS-Code in dieser Übung enthält eine Menge Code für etwas nicht Komplexes. In dieser Übung ist der einzige Unterschied zwischen den drei Buttons (primär, sekundär und tertiär) der 'Farbton'.</p>"+
+                     "<p>PS: Überarbeiten Sie den Code, indem Sie var(--hue) für die Hintergrund- und Umrissfarbe der Schaltflächen im normalen, Hover- und aktiven Zustand verwenden.</p>",
         github:"skylervale/Maher_Mahouachi_WT_Workshop_Custom_Properties_Strategien/tree/main/aufgaben/aufgabe_1.html",
     },
     {
@@ -79,7 +81,6 @@ function searchOnInput() {
     const filteredEntries = entries.filter((entry) => {
         let key;
         for (key in entry) {
-            console.log(key)
             if (entry.hasOwnProperty(key)) {
                 const prop = entry[key];
                 if (typeof prop === "string" && prop.toLowerCase().includes(filter)) {

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Aufgabe 1</title>
+    <style type="text/css">
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .button {
+            margin: 16px;
+            min-width: 128px;
+            appearance: none;
+            min-height: 32px;
+            padding: 8px 16px;
+            font-size: 24px;
+            border-radius: 3px;
+            cursor: pointer;
+            border: none;
+            color: #fcfcfc;
+            /*Wir deklarieren 'background' und 'outline-color' innerhalb der Klasse 'button' mit var(--hue) für den Farbwert*/
+            background: hsl(var(--hue), 100%, 50%);
+            outline-color: hsl(var(--hue), 100%, 80%);
+        }
+
+        /*Wir deklarieren den " background"-Stil für schwebende und aktive Zustände*/
+        .button:hover {
+            background: hsl(var(--hue), 100%, 40%);
+        }
+
+        .button:active {
+            background: hsl(var(--hue), 100%, 30%);
+        }
+
+        /*Hier stellen wir den Farbtonwert für die drei Schaltflächenklassen ein*/
+        /* primary */
+        .button--primary {
+            --hue: 233;
+        }
+
+        /* secondary */
+        .button--secondary {
+            --hue: 200;
+        }
+
+        /* Tertiary */
+        .button--tertiary {
+            --hue: 180;
+        }
+    </style>
+</head>
+<body>
+    <div class="actions">
+        <button class="button button--primary">Primäre</button>
+        <button class="button button--secondary">Sekundär</button>
+        <button class="button button--tertiary">Tertiär</button>
+    </div>
+</body>
+</html>

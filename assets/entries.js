@@ -40,6 +40,9 @@ const entries = [
 						"<li>CSS: "+
 							"<a href='https://developer.mozilla.org/en-US/docs/Web/CSS' target='_blank'>CSS Dokumentation</a>"+
 						"</li>"+
+                        "<li>Custom properties (--*): "+
+                            "<a href='https://developer.mozilla.org/en-US/docs/Web/CSS/--*' target='_blank'>CSS Dokumentation</a>"+
+                        "</li>"+
 						"<li>Browser: "+
 							"<a href='' target='_blank'>Übungen (Github Repo)</a>"+
 						"</li>"+

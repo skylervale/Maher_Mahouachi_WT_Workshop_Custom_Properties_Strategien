@@ -53,14 +53,18 @@ const entries = [
         duration:"20 min",
         description: "<p>In der ersten Übung werden wir lernen, wie man traditionelles CSS in CSS Custom Properties mit scoped variable konvertiert.</p>"+
                      "<p>Der CSS-Code in dieser Übung enthält eine Menge Code für etwas nicht Komplexes. In dieser Übung ist der einzige Unterschied zwischen den drei Buttons (primär, sekundär und tertiär) der 'Farbton'.</p>"+
-                     "<p>PS: Überarbeiten Sie den Code, indem Sie var(--hue) für die Hintergrund- und Umrissfarbe der Schaltflächen im normalen, Hover- und aktiven Zustand verwenden.</p>",
+                     "PS:<ul>"+
+                      "<li>Überarbeiten Sie den Code, indem Sie var(--hue) für die Hintergrund- und Umrissfarbe der Schaltflächen im normalen, Hover- und aktiven Zustand verwenden.</li>"+
+                      "<li>Beachten Sie die Kommentare im Code.</li></ul>",
         exercice:"skylervale/Maher_Mahouachi_WT_Workshop_Custom_Properties_Strategien/tree/main/aufgaben/aufgabe_1.html",
         solution:"skylervale/Maher_Mahouachi_WT_Workshop_Custom_Properties_Strategien/blob/main/lösungen/losung_aufgabe_1.html",
     },
     {
         title: "Aufgabe 2",
         duration:"30 min",
-        description: "In dieser Übung müssen Sie statische Variablen in dynamische Variablen umwandeln. Dies wird Ihnen helfen zu verstehen, wie Sie (CSS Custom Properties) zur Thematisierung Ihrer Website verwenden können.",
+        description: "<p>In dieser Übung müssen Sie statische Variablen in dynamische Variablen umwandeln. Dies wird Ihnen helfen zu verstehen, wie Sie (CSS Custom Properties) zur Thematisierung Ihrer Website verwenden können.</p>"+
+                     "PS:<ul>"+
+                     "<li>Beachten Sie die Kommentare im Code.</li></ul>",
         exercice:"skylervale/Maher_Mahouachi_WT_Workshop_Custom_Properties_Strategien/tree/main/aufgaben/aufgabe_2.html",
         solution:"skylervale/Maher_Mahouachi_WT_Workshop_Custom_Properties_Strategien/blob/main/lösungen/losung_aufgabe_2.html",
     },
@@ -68,8 +72,10 @@ const entries = [
         title: "Aufgabe 3",
         duration:"40 min",
         description: "<p>In dieser Übung lernen wir, wie man CSS-custom-properties verwendet, um HTML-Seiten mit dynamischen Werten und CSS3 Media Queries responsive zu machen.</p>"+
-                     "PS: Bitte verwenden Sie 'Custom properties' (--*), um die Breite des Inhalts für Tablets und Desktops zu aktualisieren.<br>"+
-                     "Verwenden Sie @media(), um die Bildschirmgröße für Tablets und Desktops zu aktualisieren.",
+                     "PS:<ul>"+
+                     "<li>Bitte verwenden Sie 'Custom properties' (--*), um die Breite des Inhalts für Tablets und Desktops zu aktualisieren.</li>"+
+                     "<li>Verwenden Sie @media(), um die Bildschirmgröße für Tablets und Desktops zu aktualisieren.</li>"+
+                     "<li>Beachten Sie die Kommentare im Code.</li></ul>",
         exercice:"skylervale/Maher_Mahouachi_WT_Workshop_Custom_Properties_Strategien/tree/main/aufgaben/aufgabe_3.html",
         solution:"skylervale/Maher_Mahouachi_WT_Workshop_Custom_Properties_Strategien/blob/main/lösungen/losung_aufgabe_3.html",
     },

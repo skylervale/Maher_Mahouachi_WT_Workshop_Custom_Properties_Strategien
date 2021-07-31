@@ -48,19 +48,22 @@ const entries = [
         description: "<p>In der ersten Übung werden wir lernen, wie man traditionelles CSS in CSS Custom Properties mit scoped variable konvertiert.</p>"+
                      "<p>Der CSS-Code in dieser Übung enthält eine Menge Code für etwas nicht Komplexes. In dieser Übung ist der einzige Unterschied zwischen den drei Buttons (primär, sekundär und tertiär) der 'Farbton'.</p>"+
                      "<p>PS: Überarbeiten Sie den Code, indem Sie var(--hue) für die Hintergrund- und Umrissfarbe der Schaltflächen im normalen, Hover- und aktiven Zustand verwenden.</p>",
-        github:"skylervale/Maher_Mahouachi_WT_Workshop_Custom_Properties_Strategien/tree/main/aufgaben/aufgabe_1.html",
+        exercice:"skylervale/Maher_Mahouachi_WT_Workshop_Custom_Properties_Strategien/tree/main/aufgaben/aufgabe_1.html",
+        solution:"skylervale/Maher_Mahouachi_WT_Workshop_Custom_Properties_Strategien/blob/main/lösungen/losung_aufgabe_1.html",
     },
     {
         title: "Aufgabe 2",
         duration:"25 min",
         description: "To do",
-        github:"skylervale/Maher_Mahouachi_WT_Workshop_Custom_Properties_Strategien/tree/main/aufgaben/aufgabe_2.html",
+        exercice:"skylervale/Maher_Mahouachi_WT_Workshop_Custom_Properties_Strategien/tree/main/aufgaben/aufgabe_2.html",
+        solution:"skylervale/Maher_Mahouachi_WT_Workshop_Custom_Properties_Strategien/blob/main/lösungen/losung_aufgabe_2.html",
     },
     {
         title: "Aufgabe 3",
         duration:"25 min",
         description: "To do",
-        github:"skylervale/Maher_Mahouachi_WT_Workshop_Custom_Properties_Strategien/tree/main/aufgaben/aufgabe_3.html",
+        exercice:"skylervale/Maher_Mahouachi_WT_Workshop_Custom_Properties_Strategien/tree/main/aufgaben/aufgabe_3.html",
+        solution:"skylervale/Maher_Mahouachi_WT_Workshop_Custom_Properties_Strategien/blob/main/lösungen/losung_aufgabe_3.html",
     },
 ];
 
@@ -92,7 +95,7 @@ function searchOnInput() {
     });
 
     // create list
-    filteredEntries.forEach(({ title, description, duration, filename, github, compatibleBrowsers }) => {
+    filteredEntries.forEach(({ title, description, duration, filename, exercice, solution, compatibleBrowsers }) => {
         // horizontal rule
         const hr = document.createElement("hr");
         list.appendChild(hr);
@@ -160,15 +163,26 @@ function searchOnInput() {
             group1.appendChild(linkButton);
         }
 
-        // github button
-        if (github) {
-            const githubButton = document.createElement("a");
-            const githubButtonNode = document.createTextNode("Aufgabe (Github)");
-            githubButton.className = "btn btn-primary btn-md";
-            githubButton.target = "_blank";
-            githubButton.href = `https://github.com/${github}`;
-            githubButton.appendChild(githubButtonNode);
-            group2.appendChild(githubButton);
+        // exercice github button
+        if (exercice) {
+            const exerciceGithubButton = document.createElement("a");
+            const exerciceGithubButtonNode = document.createTextNode("Aufgabe (Github)");
+            exerciceGithubButton.className = "btn btn-primary btn-md";
+            exerciceGithubButton.target = "_blank";
+            exerciceGithubButton.href = `https://github.com/${exercice}`;
+            exerciceGithubButton.appendChild(exerciceGithubButtonNode);
+            group2.appendChild(exerciceGithubButton);
+        }
+
+        // solution github button
+        if (solution) {
+            const solutionGithubButton = document.createElement("a");
+            const solutionGithubButtonNode = document.createTextNode("Lösung (Github)");
+            solutionGithubButton.className = "btn btn-secondary btn-md";
+            solutionGithubButton.target = "_blank";
+            solutionGithubButton.href = `https://github.com/${solution}`;
+            solutionGithubButton.appendChild(solutionGithubButtonNode);
+            group2.appendChild(solutionGithubButton);
         }
 
 

@@ -22,6 +22,9 @@ const entries = [
 	{
 		title: "Vorraussetzungen",
 		description: "<ul>"+
+                        "<li>Github Repo: "+
+                            "<a href='https://github.com/skylervale/Maher_Mahouachi_WT_Workshop_Custom_Properties_Strategien.git' target='_blank'>Klonen Sie das Workshop-Repository 'Custom-Properties-Strategien'</a>"+
+                        "</li>"+
 						"<li>IDE: "+
 							"<a href='https://www.sublimetext.com/3' target='_blank'>Sublime Text 3</a>"+
 						"</li>"+
@@ -53,14 +56,14 @@ const entries = [
     },
     {
         title: "Aufgabe 2",
-        duration:"25 min",
-        description: "To do",
+        duration:"30 min",
+        description: "In dieser Übung müssen Sie statische Variablen in dynamische Variablen umwandeln. Dies wird Ihnen helfen zu verstehen, wie Sie (CSS Custom Properties) zur Thematisierung Ihrer Website verwenden können.",
         exercice:"skylervale/Maher_Mahouachi_WT_Workshop_Custom_Properties_Strategien/tree/main/aufgaben/aufgabe_2.html",
         solution:"skylervale/Maher_Mahouachi_WT_Workshop_Custom_Properties_Strategien/blob/main/lösungen/losung_aufgabe_2.html",
     },
     {
         title: "Aufgabe 3",
-        duration:"25 min",
+        duration:"40 min",
         description: "To do",
         exercice:"skylervale/Maher_Mahouachi_WT_Workshop_Custom_Properties_Strategien/tree/main/aufgaben/aufgabe_3.html",
         solution:"skylervale/Maher_Mahouachi_WT_Workshop_Custom_Properties_Strategien/blob/main/lösungen/losung_aufgabe_3.html",

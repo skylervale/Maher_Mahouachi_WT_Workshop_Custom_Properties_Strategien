@@ -1,10 +1,173 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>Lösung Aufgabe 2</title>
-</head>
-<body>
+    <head>
+        <meta charset="utf-8">
+        <title>Aufgabe 2</title>
+        <style type="text/css">
+            /*
+                Themed properties
+            */
 
-</body>
+            :root {
+              --theme-contrast: #ffffff;
+              --theme-primary: #b30027;
+              --theme-font-size: 125%;
+            }
+
+
+            /*
+                Themed elements
+            */
+
+            .template {
+              font-size: var(--theme-font-size);
+            }
+
+
+            .primary--text {
+              color: var(--theme-primary);
+            }
+            .primary--fill {
+              background-color: var(--theme-primary);
+            }
+
+
+            .contrast--text {
+              color: var(--theme-contrast);
+            }
+            .contrast--fill {
+              background-color: var(--theme-contrast);
+            }
+
+
+            /*
+            Default styles
+            */
+
+            body {
+              font: 100% / 1.5 Arial;
+              margin: 0;
+              padding: 0;
+            }
+
+            p {
+              margin: 3em 0;
+            }
+
+            .masthead {
+              padding: 12% 2em;
+              text-align: center;
+              background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.3))
+            }
+
+            .body {
+              margin: auto;
+              max-width: 760px;
+              padding: 2em;
+            }
+
+            /*
+                Button styles
+            */
+            .button {
+              margin: 0;
+              padding: .5em 2em;
+              border-radius: .25em;
+              text-decoration: none;
+              box-shadow: 0 .1em .2em 0em rgba(0,0,0,0.5);
+              border-bottom: .15em solid rgba(0,0,0,0.25);
+            }
+
+            .button:hover {
+              background-image: linear-gradient(
+                rgba(255,255,255,0.3),
+                rgba(255,255,255,0.3)
+              );
+            }
+
+            /*
+                Toolbox styles
+            */
+            .tools {
+              position: fixed;
+              background: rgba(225,225,225,.75);
+              padding: 1em;
+              margin: .5em;
+              border-radius: .25em;
+              max-width: 20em;
+            }
+
+            .tools > * {
+              display: inline-block;
+            }
+
+            .tools label {
+              min-width: 9em;
+              max-width: 11em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="tools">
+            <label for="font-picker-size">Schriftgröße</label>
+            <input type="range" id="font-picker-size" value="125" min="80" max="300">
+            <label for="color-picker-primary">Primäre Farbe</label>
+            <input type="color" id="color-picker-primary" value="#b30027">
+            <label for="color-picker-contrast">Kontrastfarbe</label>
+            <input type="color" id="color-picker-contrast" value="#ffffff">
+        </div>
+
+
+        <div class="template">
+            <div class="primary--fill masthead">
+                <h1 class="contrast--text">Verwendung von benutzerdefinierten CSS-Eigenschaften zur Erstellung von Themenvorschauen in Echtzeit</h1>
+            </div>
+
+            <div class="body">
+                <h2 class="primary--text">Mein thematischer Seitentitel</h2>
+                <p>Bacon ipsum dolor amet swine t-bone leberkas, pork belly strip steak tongue shankle bresaola ball tip ribeye ham pork loin ham hock. Pork belly capicola ground round t-bone chicken doner beef ribs tail pork chop tenderloin swine flank ham. Jerky sirloin tongue <a class="primary--text" href="#">spare ribs t-bone</a> shoulder short ribs chuck frankfurter. Shoulder pig capicola landjaeger beef ribs, pork loin short ribs jerky salami cupim. Beef ribs bacon tongue, ribeye short loin turducken swine sirloin porchetta capicola picanha ball tip cupim shank frankfurter. Shank bacon biltong, flank beef turkey porchetta sausage meatloaf pastrami shankle tenderloin spare ribs short ribs pork belly.</p>
+
+                <a class="button primary--fill contrast--text" href="#">Button</a>
+
+                <p>Bresaola bacon shank salami pancetta drumstick andouille shoulder capicola hamburger corned beef prosciutto t-bone chuck. <a class="primary--text" href="#">Biltong sausage boudin, brisket turducken</a> doner venison landjaeger salami picanha tri-tip pork belly spare ribs short ribs. Turkey pork belly shoulder boudin tail, beef pork loin ground round spare ribs ribeye tri-tip landjaeger bresaola. Cow shankle rump tail. Ground round ham hock capicola landjaeger sausage. Ribeye pig meatball, spare ribs pancetta capicola doner salami.</p>
+
+            </div>
+        </div>
+
+        <script type="text/javascript">
+
+            /*Deklaration von primaryColorPicker, contrastColorPicker und fontSizePicker*/
+            var primaryColorPicker = document.getElementById('color-picker-primary');
+            var contrastColorPicker = document.getElementById('color-picker-contrast');
+            var fontSizePicker = document.getElementById('font-picker-size');
+
+            /*Funktion zur Aktualisierung der Themenfarbe für jeden Pikcer*/
+            function setThemeVar(name, value, unit) {
+              var rootStyles = document.styleSheets[0].cssRules[0].style;
+              rootStyles.setProperty('--theme-' + name, value + (unit || ''));
+            }
+
+            /*Hinzufügen eines Ereignis-Listeners auf #color-picker-primary zur Aktualisierung der Primärfarbe des Themes.*/
+            primaryColorPicker.addEventListener('input', function (e) {
+              setThemeVar('primary', e.target.value);
+            });
+
+            /*Hinzufügen eines Ereignis-Listeners auf #color-picker-contrast zur Aktualisierung der Primärfarbe des Themes.*/
+            contrastColorPicker.addEventListener('input', function (e) {
+              setThemeVar('contrast', e.target.value);
+            });
+
+            /*Hinzufügen eines Ereignis-Listeners auf #color-picker-size zur Aktualisierung der Primärfarbe des Themes.*/
+            fontSizePicker.addEventListener('input', function (e) {
+              setThemeVar('font-size', e.target.value, '%');
+            });
+
+            /*Standardthema festlegen*/
+            setThemeVar('primary', primaryColorPicker.value);
+            setThemeVar('contrast', contrastColorPicker.value);
+            setThemeVar('font-size', fontSizePicker.value, '%');
+
+
+        </script>
+    </body>
 </html>

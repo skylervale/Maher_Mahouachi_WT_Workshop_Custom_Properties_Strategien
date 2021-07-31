@@ -3,8 +3,85 @@
 <head>
     <meta charset="utf-8">
     <title>Aufgabe 3</title>
+    <style type="text/css">
+        
+        /* Globalen Stile */
+
+        body {
+            background-color: LavenderBlush;
+            color: Teal;
+            font-size: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.5;
+            margin: 0;
+            padding: 1rem;
+        }
+
+        *, ::after, ::before {
+            box-sizing: border-box;
+        }
+
+        .container { 
+            max-width: 960px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Ende der globalen Stile */
+
+
+        /* Statischer Stil */
+        /*
+            Aktualisieren Sie diesen Code, um diese hmtl-Seite mit CSS @media Rule responsive zu machen.
+
+            To-Do-Liste:
+                1. Erstellen Sie eine Standardvariable für die (column-header-content). Die Variable "Standardgröße" wird für die mobile Bildschirmgröße verwendet.
+                2. @media (min-width: 576px) verwenden, um Elemente für die Bildschirmgröße von Tablets zu aktualisieren
+                3. @media (min-width: 768px) verwenden, um Elemente für die Desktop-Bildschirmgröße zu aktualisieren
+                4. Spalten innerhalb der Klassen (Kopfzeile/Inhalt/Seitenleiste) durch dynamische Elemente ersetzen.
+                    Sie können diese Elementnamen verwenden:
+                      --width-mobile
+                      --width-tablet
+                      --width-desktop
+        */
+
+        .column {
+            columns: 12;
+            background-color: burlywood;
+            border: LavenderBlush 2px solid;
+            border-radius: 8px;
+            padding: 16px;
+        }
+
+
+        .header {
+            columns: 12;/*--width-mobile/--width-tablet/--width-desktop*/
+            height: 8rem;
+        }
+
+        .content {
+            columns: 8;/*--width-mobile/--width-tablet/--width-desktop*/
+            height: 64rem;
+        }
+
+        .sidebar {
+            columns: 4;/*--width-mobile/--width-tablet/--width-desktop*/
+            height: 64rem;
+        }
+    </style>
 </head>
 <body>
-
+    <div class="container">
+        <header class="column header">
+            .header
+        </header>
+        <main class="column content">
+            .content
+        </main>
+        <aside class="column sidebar">
+            .sidebar
+        </aside>
+    </div>
 </body>
 </html>

@@ -64,7 +64,9 @@ const entries = [
     {
         title: "Aufgabe 3",
         duration:"40 min",
-        description: "To do",
+        description: "<p>In dieser Übung lernen wir, wie man CSS-custom-properties verwendet, um HTML-Seiten mit dynamischen Werten und CSS3 Media Queries responsive zu machen.</p>"+
+                     "PS: Bitte verwenden Sie 'Custom properties' (--*), um die Breite des Inhalts für Tablets und Desktops zu aktualisieren.<br>"+
+                     "Verwenden Sie @media(), um die Bildschirmgröße für Tablets und Desktops zu aktualisieren.",
         exercice:"skylervale/Maher_Mahouachi_WT_Workshop_Custom_Properties_Strategien/tree/main/aufgaben/aufgabe_3.html",
         solution:"skylervale/Maher_Mahouachi_WT_Workshop_Custom_Properties_Strategien/blob/main/lösungen/losung_aufgabe_3.html",
     },

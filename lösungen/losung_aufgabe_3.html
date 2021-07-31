@@ -3,8 +3,94 @@
 <head>
     <meta charset="utf-8">
     <title>Lösung Aufgabe 3</title>
+    <style type="text/css">
+        
+        /* Globalen Stile */
+
+        body {
+            background-color: LavenderBlush;
+            color: Teal;
+            font-size: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.5;
+            margin: 0;
+            padding: 1rem;
+        }
+
+        *, ::after, ::before {
+            box-sizing: border-box;
+        }
+
+        .container { 
+            max-width: 960px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Ende der globalen Stile */
+
+
+        /* Dynamisch Stil */
+
+        .column {
+            --columns: 12;
+            --width: var(--width-mobile, 0);
+            background-color: burlywood;
+            border: LavenderBlush 2px solid;
+            border-radius: 8px;
+            padding: 16px;
+            flex-basis: calc(var(--width) / var(--columns) * 100%);
+        }
+
+
+        .header {
+            --width-mobile: 12; /*Die Standardgröße für die Kopfzeile ist 12*/
+            height: 8rem;
+        }
+
+        .content {
+            --width-mobile: 12;
+            --width-tablet: 6;
+            --width-desktop: 8;
+            height: 64rem;
+        }
+
+        .sidebar {
+            --width-mobile: 12;
+            --width-tablet: 6;
+            --width-desktop: 4;
+            height: 64rem;
+        }
+
+        /*@media-Query für Tablet-Bildschirmgröße*/
+        @media (min-width: 576px) {
+          .column {
+            --width-tablet: var(--width-mobile);
+            --width: var(--width-tablet);
+          }
+        }
+        /*@media-Query für Desktop-Bildschirmgröße*/
+        @media (min-width: 768px) {
+          .column {
+            --width-desktop: var(--width-tablet);
+            --width: var(--width-desktop);
+          }
+        }
+    </style>
 </head>
 <body>
-
+    <div class="container">
+        <!--Umschalten der Reihenfolge von 'column' und 'header' in der Klasse, um das Element 'column' bei der @media-Abfrage umzuschreiben-->
+        <header class="header column">
+            .header
+        </header>
+        <main class="content column">
+            .content
+        </main>
+        <aside class="sidebar column">
+            .sidebar
+        </aside>
+    </div>
 </body>
 </html>

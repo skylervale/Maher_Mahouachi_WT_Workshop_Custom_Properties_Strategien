@@ -1,7 +1,7 @@
 # WT_Workshop Custom Properties Strategien
 
 Coach: Maher Mahouachi <br>
-Dauer: 120-150 Minuten <br>
+Dauer: 120-130 Minuten <br>
 Termin: Asynchronen Workshop <br>
 
 ---
